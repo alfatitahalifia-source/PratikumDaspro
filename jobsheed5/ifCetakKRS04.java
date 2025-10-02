@@ -13,13 +13,6 @@ public static void main(String[] args) {
         System.out.println("Registrasi diolak.Silahkan lunasi UKT terlebih dahulu");
         sc.close();
     }
-    System.out.println("--- Versi Ternari Operator ---");
-    String hasil = sc.next();
-        if(uktLunas){
-            System.out.println("Pembayaran UKT terverifikasi.\nSilahkan cetak KRS dan minta tanda tangan DPA");
-        }else{
-            System.out.println("Registrasi diolak.Silahkan lunasi UKT terlebih dahulu");
-                sc.close();
     }
-        }
+    
         

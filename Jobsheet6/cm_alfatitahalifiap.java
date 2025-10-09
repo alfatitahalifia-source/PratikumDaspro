@@ -29,5 +29,81 @@ public class cm_alfatitahalifiap {
         System.out.print("Nilai Tugas : ");
         int nilaiTugasstruktur = sc.nextInt();
 
+
+
+
+
+        double nilaiAkhiralgoritma=(nilaiUtsalgoritma*0.3)+(nialiUasalgoritma*0.4)+(nilaiTugasalgoritma*0.3);
+        String nilaihurufalgoritma = "";
+        if (nilaiAkhiralgoritma <= 39) {
+            nilaihurufalgoritma = "E";
+        }else if (nilaiAkhiralgoritma <= 50) {
+            nilaihurufalgoritma = "D";
+        }else if (nilaiAkhiralgoritma <= 60){
+            nilaihurufalgoritma = "C";
+        }else if (nilaiAkhiralgoritma <= 65){
+            nilaihurufalgoritma = "C+";
+        }else if (nilaiAkhiralgoritma <= 73){
+            nilaihurufalgoritma = "B";
+        }else if(nilaiAkhiralgoritma <= 80){
+            nilaihurufalgoritma = "B+";
+        }else if (nilaiAkhiralgoritma <= 100){
+            nilaihurufalgoritma = "A";
+        }
+        String statusalgoritma = "";
+        if (nilaiAkhiralgoritma >= 60){
+            statusalgoritma = "LULUS";
+        }else{
+            statusalgoritma = "TIDAK LULUS";
+        }
+
+        double nilaiAkhirstuktur=(nilaiUtsstruktur*0.3)+(nialiUasstruktur*0.4)+(nilaiTugasstruktur*0.3);
+        String nilaihurufstruktur = "";
+        if (nilaiAkhirstuktur <= 39) {
+            nilaihurufstruktur = "E";
+        }else if (nilaiAkhirstuktur <= 50) {
+            nilaihurufstruktur = "D";
+        }else if (nilaiAkhirstuktur <= 60){
+            nilaihurufstruktur = "C";
+        }else if (nilaiAkhirstuktur <= 65){
+            nilaihurufstruktur = "C+";
+        }else if (nilaiAkhirstuktur <= 73){
+            nilaihurufstruktur = "B";
+        }else if(nilaiAkhirstuktur <= 80){
+            nilaihurufstruktur = "B+";
+        }else if (nilaiAkhirstuktur <= 100){
+            nilaihurufstruktur = "A";
+        }
+        String statusstruktur = "";
+        if (nilaiAkhirstuktur >= 60){
+            statusstruktur = "LULUS";
+        }else{
+            statusstruktur = "TIDAK LULUS";
+        }
+        
+        double rataratanilaiakhir=(nilaiAkhiralgoritma+nilaiAkhirstuktur)/2;
+        String statussemester="";
+        if (statusalgoritma.equals("LULUS")&& statusstruktur.equals("LULUS")){
+            if (nilaiAkhiralgoritma>=70&&nilaiAkhirstuktur>=70) {
+                statussemester="LULUS";
+            }else{
+                statussemester="TIDAK LULUS";
+            }
+        }else{
+            statussemester="TIDAK LULUS";
+        }
+
+        System.out.println("=== HASIL PENILAIAN AKADEMIK ===");
+        System.out.println("Nama : " + nama);
+        System.out.println(" NIM  :"+ nim);
+        System.out.println("Mata Kuliah\t\t\t\tUTS\tUAS\tTugas\tNilai akhir\tNilai Huruf\tStatus");
+        System.out.println("==============================================================================================================");
+        System.out.println("Algoritma dan Pemograman\t\t"+nilaiUtsalgoritma+"\t"+nialiUasalgoritma+"\t"+nilaiTugasalgoritma+"\t"+nilaiAkhiralgoritma+"\t\t"+nilaihurufalgoritma+"\t\t"+statusalgoritma);
+        System.out.println("Sruktur Data\t\t\t\t"+nilaiUtsstruktur+"\t"+nialiUasstruktur+"\t"+nilaiTugasstruktur+"\t"+nilaiAkhirstuktur+"\t\t"+nilaihurufstruktur+"\t\t"+statusstruktur);
+        System.out.println();
+        System.out.println("Rata rata Nilai Akhir\t: "+statussemester);
+        System.out.println("Status Semester\t\t: "+statussemester);
+
+    
     }
 }

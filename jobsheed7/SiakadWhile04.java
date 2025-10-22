@@ -16,8 +16,9 @@ public class SiakadWhile04 {
                 System.out.print("Nilai tidak valid. Masukkan lagi nilai yang valid!");
                 continue;
             }
-            if (nilai > 80 && nilai <= 100) {
-                System.out.println("Nilai mahasiswa ke-"+ (i + 1) + "adalah A");
+            if (nilai > 80 && nilai <= 100 ) {
+                System.out.println("Nilai mahasiswa ke-"+ (i + 1) + " adalah A" );
+                System.out.println("Bagus, pertahankan nilainya!");
             }else if (nilai > 73 && nilai <= 80) {
                 System.out.println("Nilai mahasiswa ke-" + (i + 1 ) + "adalah B+");
             }else if (nilai > 65 && nilai <= 73) {
@@ -35,4 +36,11 @@ public class SiakadWhile04 {
         }
     }
 }
+
+//JAWABAN PERTANYAAN 
+//1.a.Maksud dari nilai < 0 || nilai > 100 ) adalah jika nilai lebih kecil 0 atau nilai lebih besar 100 untuk membatasi kondisi tersebut
+//  b. Maksud dari continue adalah untuk melewati/skip dan melanjutkan ke berikutnya.
+//2.jadi i++ ditulis di akhir while agar perulangan dapat dijalankan dan memastikan kondisi berjalan dan perulangan berhenti sedangkan jika 1++ ada di awal perulangan tidak berjalan/tidak berhenti
+//3.19 kali
+
 

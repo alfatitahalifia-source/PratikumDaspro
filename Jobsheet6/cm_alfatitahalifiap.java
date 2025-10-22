@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class cm_alfatitahalifiap {
     public static void main(String[] args) {
+
+        //deklarsi scanner
         Scanner sc=new Scanner(System.in);
+
         System.out.println("--- INPUT DATA MAHASISWA ---");
         System.out.print("Nama : ");
         String nama = sc.nextLine();
@@ -19,7 +22,19 @@ public class cm_alfatitahalifiap {
         int nialiUasalgoritma = sc.nextInt();
         System.out.print("Nilai Tugas : ");
         int nilaiTugasalgoritma = sc.nextInt();
+        System.out.print("Nilai kuis : ");
+        int nilaikuizalgoritma = sc.nextInt();
+        System.out.print("Nilai Case Method :");
+        int nilaiCMalgoritma = sc.nextInt();
 
+        double nilaibatasankuisalgoritma=(100);
+        String nilaiangkaalgoritma="";
+        if (nilaibatasankuisalgoritma >=100) {
+            nilaiangkaalgoritma = "salah" ;
+        } else {
+            nilaiangkaalgoritma = "salah";
+            
+        }
 
         System.out.println("--- MATA KULIAH 2 : Struktur Data ");
         System.out.print("Nilai UTS : ");
@@ -28,9 +43,18 @@ public class cm_alfatitahalifiap {
         int nialiUasstruktur = sc.nextInt();
         System.out.print("Nilai Tugas : ");
         int nilaiTugasstruktur = sc.nextInt();
+        System.out.print("Nilai kuis : ");
+        int nilaikuizstruktur = sc.nextInt();
+        System.out.print("Nilai Case Method :");
+        int nilaiCMstruktur = sc.nextInt();
 
-
-
+        double nilaibatasanCMstruktur=(100);
+        String nilaiangkaCM="";
+        if (nilaibatasanCMstruktur >=100) {
+            nilaiangkaCM = "salah" ;
+        } else {nilaiangkaCM = "salah" ;
+            
+        }
 
 
         double nilaiAkhiralgoritma=(nilaiUtsalgoritma*0.3)+(nialiUasalgoritma*0.4)+(nilaiTugasalgoritma*0.3);
@@ -84,11 +108,15 @@ public class cm_alfatitahalifiap {
         double rataratanilaiakhir=(nilaiAkhiralgoritma+nilaiAkhirstuktur)/2;
         String statussemester="";
         if (statusalgoritma.equals("LULUS")&& statusstruktur.equals("LULUS")){
-            if (nilaiAkhiralgoritma>=70&&nilaiAkhirstuktur>=70) {
+
+
+            if(rataratanilaiakhir<=70) {
                 statussemester="LULUS";
             }else{
                 statussemester="TIDAK LULUS";
             }
+
+            
         }else{
             statussemester="TIDAK LULUS";
         }
@@ -99,11 +127,11 @@ public class cm_alfatitahalifiap {
         System.out.println("Mata Kuliah\t\t\t\tUTS\tUAS\tTugas\tNilai akhir\tNilai Huruf\tStatus");
         System.out.println("==============================================================================================================");
         System.out.println("Algoritma dan Pemograman\t\t"+nilaiUtsalgoritma+"\t"+nialiUasalgoritma+"\t"+nilaiTugasalgoritma+"\t"+nilaiAkhiralgoritma+"\t\t"+nilaihurufalgoritma+"\t\t"+statusalgoritma);
-        System.out.println("Sruktur Data\t\t\t\t"+nilaiUtsstruktur+"\t"+nialiUasstruktur+"\t"+nilaiTugasstruktur+"\t"+nilaiAkhirstuktur+"\t\t"+nilaihurufstruktur+"\t\t"+statusstruktur);
+        System.out.println("Sruktur Data\t\t\t\t"+nilaiUtsstruktur+"\t"+nialiUasstruktur+"\t"+nilaiTugasstruktur+"\t"+nilaiAkhirstuktur+"\t\t"+nilaihurufstruktur+"\t\t"+statusstruktur+"\t\t"+nilaiangkaalgoritma);
         System.out.println();
         System.out.println("Rata rata Nilai Akhir\t: "+statussemester);
         System.out.println("Status Semester\t\t: "+statussemester);
-
+        
     
     }
 }

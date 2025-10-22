@@ -24,7 +24,13 @@ public class KafeDoWhile04 {
         int totalHarga = (kopi * hargakopi)+ (teh * hargateh) + (roti * hargaroti);
         System.out.println("Total yang harus dibayar : Rp " + totalHarga);
         sc.nextInt();
-        } while (true);
-        
+        } while (true);   
     }
 }
+
+
+//JAWABAN PERTANYAAN
+//1.Tidak terjadi perulangan karena jika kita menulis "batal" transaksi dibatalkan
+//2.Saat kondisi yang diperiksa bernilai salah dan kondisi sudah terpenuhi
+//3.fungsi true untuk perulangan tak terbatas dan perulangan akan terus mengeksekusi terus-menerus dan tidak akan berhenti jika tidak ada perintah
+//4.Do While mengeksekusi statementnya terlebih dahulu, lalu mengevaluasi kondisi . Jadi perintah Do While akan mengeksekusi blok statemnet minimal 1 kali meskipun kondisi tidak terpenuhi.

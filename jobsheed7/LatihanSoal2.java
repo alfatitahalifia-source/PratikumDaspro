@@ -28,5 +28,6 @@ public class LatihanSoal2 {
             }
             
         }while (jenis!= 0);
+        
     }
 }

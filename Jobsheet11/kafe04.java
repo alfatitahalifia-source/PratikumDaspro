@@ -1,9 +1,25 @@
 package Jobsheet11;
+
 public class kafe04 {
     public static void main(String[] args) {
-        menu();
+        Menu("Fia", "diskon50", true);
+        System.out.println();
+        Menu("Budi", "diskon30", true);
     }
-    public static void menu() {
+
+    public static void Menu(String namaPelanggan, String kodePromo, boolean isMember) {
+        System.out.println("Selamat datang, " + namaPelanggan + "!");
+        if (isMember) {
+            System.out.println("Anda adalah member");
+        }
+        if (kodePromo == "diskon50") {
+            System.out.println("dapatkah diskon 50% untuk setiap pembelian!");
+        } else if (kodePromo == "diskon30") {
+            System.out.println("dapatkah diskon 30% untuk setiap pembelian!");
+        } else {
+            System.out.println("Kode invalid");
+        }
+
         System.out.println("=============== MENU RESTO KAFE ==============");
         System.out.println("1. Kopi Hitam - Rp 15,000");
         System.out.println("2. Cappucino - Rp 20,000");
@@ -14,4 +30,5 @@ public class kafe04 {
         System.out.println("==============================================");
         System.out.println("Silahkan pilih menu yang anda inginkan");
     }
+
 }

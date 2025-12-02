@@ -6,7 +6,11 @@ import java.util.Scanner;
 public class RekapPenjualanCafe {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int [][]dataPenjualanKafe =new int[2][7];
+        System.out.print("Masukkan jumlah menu : ");
+        int jmlMenu = sc.nextInt();
+        System.out.print("Masukkan jumlah hari ke- ");
+        int jmlHari = sc.nextInt();
+        int [][]dataPenjualanKafe =new int[jmlMenu][jmlHari];
         dataPenjualan(dataPenjualanKafe);
         tampilArray(dataPenjualanKafe);
         maxArray(dataPenjualanKafe);
